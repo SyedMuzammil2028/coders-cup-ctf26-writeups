@@ -1,0 +1,10 @@
+services:
+  baby-rsa:
+    build: .
+    ports:
+      - "${HOST_PORT:-1337}:1337"
+    environment:
+      FLAG: "${FLAG:?Set FLAG in your shell or local .env file}"
+      PORT: "1337"
+    mem_limit: 128m
+    restart: unless-stopped

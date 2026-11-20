@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1200" viewBox="0 0 1920 1200" fill="none">
+<defs>
+ <linearGradient id="room" x2="0" y2="1"><stop stop-color="#131d2b"/><stop offset=".65" stop-color="#202827"/><stop offset="1" stop-color="#111820"/></linearGradient>
+ <linearGradient id="stone"><stop stop-color="#101922"/><stop offset=".28" stop-color="#344044"/><stop offset=".5" stop-color="#283137"/><stop offset="1" stop-color="#101922"/></linearGradient>
+ <linearGradient id="arch"><stop stop-color="#48504a"/><stop offset=".28" stop-color="#252f35"/><stop offset=".7" stop-color="#26323a"/><stop offset="1" stop-color="#151e2a"/></linearGradient>
+ <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#28302f"/><stop offset="1" stop-color="#0d1722"/></linearGradient>
+ <radialGradient id="warm"><stop stop-color="#e5ad56" stop-opacity=".5"/><stop offset=".25" stop-color="#bb7530" stop-opacity=".19"/><stop offset="1" stop-color="#956224" stop-opacity="0"/></radialGradient>
+ <radialGradient id="blue"><stop stop-color="#45617a" stop-opacity=".25"/><stop offset="1" stop-color="#25394d" stop-opacity="0"/></radialGradient>
+ <linearGradient id="ray" x2=".7" y2="1"><stop stop-color="#a4b1a8" stop-opacity=".1"/><stop offset="1" stop-color="#c0cbbb" stop-opacity="0"/></linearGradient>
+ <pattern id="blocks" width="215" height="125" patternUnits="userSpaceOnUse"><path d="M0 0h215v125H0ZM107 0v62M0 62h215M52 62v63" stroke="#9eab9b" stroke-opacity=".045" stroke-width="2"/></pattern>
+ <pattern id="books" width="95" height="128" patternUnits="userSpaceOnUse"><path fill="#10171c" d="M0 0h95v128H0Z"/><path fill="#34312a" d="M5 21h10v93H5ZM19 15h8v99h-8ZM33 30h13v84H33ZM51 19h9v95h-9ZM65 9h12v105H65ZM80 25h9v89h-9Z"/><path stroke="#796447" stroke-opacity=".5" d="M6 35h8m7-8h5m8 17h10m9-10h6m7-12h10m4 18h8M0 117h95"/><path fill="#55452e" d="M0 118h95v8H0Z"/></pattern>
+ <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" seed="12"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".045"/></feComponentTransfer><feBlend in="SourceGraphic" mode="soft-light"/></filter>
+ <g id="lamp"><path d="M-14 18H14L9 55H-9Z" fill="#2b251c" stroke="#8d7042"/><path d="M-7 23H7L5 48H-5Z" fill="#d6a558"/><path d="M-2 24H2V48H-2Z" fill="#ffdeb0"/><path d="M-20 16H20L9 6H-9ZM-11 57H11M0 6V-10M-15 63H15" stroke="#a3834b" stroke-width="2"/><ellipse cy="35" rx="100" ry="150" fill="url(#warm)"/></g>
+</defs>
+<path fill="url(#room)" d="M0 0h1920v1200H0Z"/>
+<ellipse cx="1120" cy="460" rx="700" ry="550" fill="url(#blue)"/>
+<!-- Receding pointed arches and shadowed archive bays. Original vector artwork. -->
+<path d="M700 850V410Q700 240 960 105q260 135 260 305v440" fill="#101b27" stroke="#3d494a" stroke-width="26"/>
+<path d="M765 850V438q0-150 195-253 195 103 195 253v412" fill="#15212b" stroke="#38474c" stroke-width="12"/>
+<path d="M830 850V470q0-112 130-190 130 78 130 190v380" fill="#111a23" stroke="#3a484c" stroke-width="9"/>
+<path d="M901 800V490q0-71 59-122 59 51 59 122v310" fill="#21303c" stroke="#51605e" stroke-opacity=".35" stroke-width="5"/>
+<path d="M960 373v420m-55-270h110m-110 135h110" stroke="#0d1722" stroke-width="8"/>
+<path d="M0 0h680v860H0ZM1240 0h680v860h-680Z" fill="url(#blocks)"/>
+<path d="M0 0h620v870H0Z" fill="#202b31"/>
+<path d="M1300 0h620v870h-620Z" fill="#1a2630"/>
+<path d="M0 0h620v870H0ZM1300 0h620v870h-620Z" fill="url(#blocks)"/>
+<!-- Tall library alcoves. -->
+<path d="M93 842V271Q93 171 257 70q164 101 164 201v571Z" fill="#10171d" stroke="#3a4140" stroke-width="22"/>
+<path d="M115 840V280Q115 190 257 99q142 91 142 181v559Z" fill="url(#books)"/>
+<path d="M1499 842V271q0-100 164-201 164 101 164 201v571Z" fill="#10171d" stroke="#354047" stroke-width="22"/>
+<path d="M1521 840V280q0-90 142-181 142 91 142 181v559Z" fill="url(#books)" opacity=".6"/>
+<path d="M115 335h284M115 590h284M1521 335h284M1521 590h284" stroke="#1b2328" stroke-width="18"/>
+<!-- The foreground vault's massive stone ribs. -->
+<path d="M469 920V410Q469 98 960-130q491 228 491 540v510" stroke="#0c141e" stroke-width="165"/>
+<path d="M469 920V410Q469 98 960-130q491 228 491 540v510" stroke="url(#arch)" stroke-width="115"/>
+<path d="M489 919V410Q489 119 960-108q471 227 471 518v509" stroke="#697061" stroke-opacity=".2" stroke-width="3"/>
+<path d="M402 413h136M1380 413h137M407 429h126M1385 429h127" stroke="#5c6255" stroke-opacity=".4" stroke-width="6"/>
+<path d="M418 448h101v466H418ZM1401 448h101v466h-101Z" fill="url(#stone)"/>
+<path d="M405 889h129v27H405ZM1387 889h129v27h-129Z" fill="#303b3f"/>
+<!-- Outer piers create a strong architectural frame. -->
+<path d="M0 0h75v1030H0ZM1845 0h75v1030h-75Z" fill="#0c141d"/>
+<path d="M76 0h27v945H76ZM1818 0h27v945h-27Z" fill="url(#stone)"/>
+<!-- Sconces, entirely static: no particle or rendering loop. -->
+<path d="M468 503v40l-33 12M1450 503v40l33 12M118 453v36l38 12M1802 453v36l-38 12" stroke="#594b34" stroke-width="5"/>
+<use href="#lamp" transform="translate(435 544)"/><use href="#lamp" transform="translate(1483 544)"/>
+<use href="#lamp" transform="translate(156 490) scale(.85)"/><use href="#lamp" transform="translate(1764 490) scale(.85)"/>
+<use href="#lamp" transform="translate(743 609) scale(.47)"/><use href="#lamp" transform="translate(1177 609) scale(.47)"/>
+<path d="M400 930 920 465h82l520 465Z" fill="url(#ray)" opacity=".5"/>
+<!-- Floor perspective. -->
+<path d="M0 920 650 810h620l650 110v280H0Z" fill="url(#floor)"/>
+<g stroke="#7b8275" stroke-opacity=".08"><path d="M960 810 40 1200M960 810 430 1200M960 810 760 1200M960 810 1160 1200M960 810 1490 1200M960 810 1880 1200M400 850h1120M250 890h1420M0 955h1920M0 1060h1920M0 1190h1920"/></g>
+<ellipse cx="435" cy="906" rx="190" ry="53" fill="url(#warm)" opacity=".3"/><ellipse cx="1483" cy="906" rx="190" ry="53" fill="url(#warm)" opacity=".3"/>
+<path d="M0 0h1920v1200H0Z" fill="transparent" filter="url(#grain)"/>
+</svg>

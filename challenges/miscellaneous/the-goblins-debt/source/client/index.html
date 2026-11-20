@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#101c2e" />
+    <title>The Goblin’s Debt · Coder’s Cup ’26</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23ac443e' d='M8 50Q4 4 32 4T56 50L32 60Z'/%3E%3Ccircle cx='32' cy='33' r='14' fill='%23f0c998'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <main id="app">
+      <div id="game" aria-label="The Goblin's Debt platform game"></div>
+      <header id="hud" hidden>
+        <div class="hud-coins">
+          <span class="coin-icon">◆</span>
+          <div>
+            <small>YOUR POUCH</small
+            ><strong id="wallet">0 <em>/ 23</em></strong>
+          </div>
+        </div>
+        <div class="hud-ledger">
+          <small>GUARDIAN’S LEDGER</small
+          ><strong id="ledger">0 <em>/ 120</em></strong>
+          <div class="meter"><i id="ledger-fill"></i></div>
+        </div>
+        <button id="pause-button" aria-label="Pause game">Ⅱ</button>
+      </header>
+      <div id="region" hidden>THE CASTLE COURTYARD</div>
+      <div id="toast" role="status"></div>
+      <section id="menu" class="screen">
+        <div class="menu-shade"></div>
+        <div class="menu-content">
+          <p class="eyebrow">
+            CODER’S CUP ’26 <span> / </span> A MISC ADVENTURE
+          </p>
+          <div class="crest" aria-hidden="true">◇</div>
+          <h1><span>THE</span>GOBLIN’S<br />DEBT</h1>
+          <p class="tagline">
+            Some debts are paid with gold.<br />Others with wit.
+          </p>
+          <button id="play" class="primary">
+            Enter the forest <span>→</span>
+          </button>
+          <button id="how" class="text-button">How to play</button>
+          <p id="connection" role="status">
+            Connecting to the guardian’s ledger…
+          </p>
+        </div>
+        <footer>
+          <span>FAST–NUCES KARACHI</span
+          ><span>AN ENCHANTED FOREST. AN UNREASONABLE DEBT.</span>
+        </footer>
+      </section>
+      <section id="help" class="veil" hidden>
+        <div class="panel">
+          <p class="eyebrow">A TRAVELER’S GUIDE</p>
+          <h2>A little gold.<br />A long way home.</h2>
+          <p>
+            The guardian demands 120 gold pieces. Follow the old forest road to
+            the watchtower, collect all 23 coins, then return to deposit your
+            pouch. Your ledger is saved; coins in your pouch are lost on
+            refresh.
+          </p>
+          <div class="controls">
+            <p>
+              <kbd>A</kbd> <kbd>D</kbd> or <kbd>←</kbd> <kbd>→</kbd
+              ><span>Move</span>
+            </p>
+            <p>
+              <kbd>Space</kbd> / <kbd>W</kbd> / <kbd>↑</kbd><span>Jump</span>
+            </p>
+            <p><kbd>E</kbd><span>Talk / deposit</span></p>
+            <p><kbd>Esc</kbd><span>Pause / resume</span></p>
+          </div>
+          <p class="whisper">“I trust gold more than my own eyes.”</p>
+          <button id="help-close" class="primary">
+            Understood <span>→</span>
+          </button>
+        </div>
+      </section>
+      <section id="pause" class="veil" hidden>
+        <div class="panel compact">
+          <p class="eyebrow">TAKE A BREATH</p>
+          <h2>The forest can wait.</h2>
+          <button id="resume" class="primary">
+            Continue the journey <span>→</span></button
+          ><label class="setting"
+            ><input id="sound" type="checkbox" /> Sound effects</label
+          ><label class="setting"
+            ><input id="reduced" type="checkbox" /> Reduced effects</label
+          ><button id="return-menu" class="text-button">Return to title</button>
+          <p class="muted">Deposited gold stays in your ledger.</p>
+        </div>
+      </section>
+      <section id="dialogue" hidden aria-live="polite">
+        <div class="dialogue-rule"></div>
+        <small>VESPER · KEEPER OF THE VAULT</small>
+        <p id="dialogue-text"></p>
+        <button id="dialogue-close" class="text-button">
+          Continue <kbd>E</kbd>
+        </button>
+      </section>
+      <div id="interact" hidden><kbd>E</kbd> Talk to Guardian</div>
+      <section id="victory" class="veil" hidden>
+        <div class="panel victory-panel">
+          <p class="eyebrow">THE SECRET RECORD</p>
+          <div class="victory-sigil">◇</div>
+          <h2>The debt is paid.</h2>
+          <p>The guardian steps aside.<br />The Secret Record is yours.</p>
+          <small>YOUR FLAG</small>
+          <pre id="flag">Opening the vault…</pre>
+          <p id="reward-error" role="status"></p>
+          <button id="copy" class="primary" hidden>
+            Copy flag <span>⧉</span></button
+          ><button id="retry-reward" class="text-button" hidden>
+            Retry opening the vault
+          </button>
+        </div>
+      </section>
+      <div id="bottom-controls" hidden>
+        <span><kbd>A</kbd> <kbd>D</kbd> MOVE</span
+        ><span><kbd>SPACE</kbd> JUMP</span><span><kbd>E</kbd> INTERACT</span
+        ><span><kbd>ESC</kbd> PAUSE</span>
+      </div>
+      <div id="mobile-note">Best explored on a desktop with a keyboard.</div>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

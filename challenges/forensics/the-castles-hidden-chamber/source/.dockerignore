@@ -1,0 +1,16 @@
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+__pycache__
+*.py[cod]
+document
+organizer
+scripts
+tests
+README.md
+challenge.yml
+docker-compose.yml
+requirements.txt
+

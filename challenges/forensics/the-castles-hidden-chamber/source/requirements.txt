@@ -1,0 +1,3 @@
+# The Python runtime uses only the standard library.
+# ExifTool and steghide are installed as operating-system packages in Docker.
+

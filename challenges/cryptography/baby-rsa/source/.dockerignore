@@ -1,0 +1,12 @@
+.git
+.venv
+__pycache__
+*.py[cod]
+.env
+.env.*
+!.env.example
+organizer
+tests
+README.md
+challenge.yml
+docker-compose.yml

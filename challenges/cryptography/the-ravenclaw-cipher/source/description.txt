@@ -1,0 +1,21 @@
+The Ravenclaw Cipher
+200 points         Medium
+
+
+A mysterious encrypted message has been discovered inside the Ravenclaw common room.
+
+The message was protected using a classical cipher in which the alphabet shifts according to a repeating secret word.
+
+Professor Flitwick left one final clue:
+
+"The key belongs to the Hogwarts house that values wisdom, wit, and learning above all else."
+
+Encrypted message:
+
+FWG_TBUE_DACIQIEGO
+
+Decrypt the message to recover the secret phrase.
+
+Flag format:ACM{decrypted_message}
+
+hint : Use lowercase letters and preserve the underscores.

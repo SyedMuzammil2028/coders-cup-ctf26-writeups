@@ -1,0 +1,8 @@
+*
+!Dockerfile
+!app.py
+!generate.py
+!static/
+!static/index.html
+!static/styles.css
+!static/app.js

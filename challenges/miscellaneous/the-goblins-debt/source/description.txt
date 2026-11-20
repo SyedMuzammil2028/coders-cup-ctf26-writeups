@@ -1,0 +1,24 @@
+The Goblin's Debt
+400        Medium
+Deep within an enchanted forest, a cunning goblin guards an ancient secret known as The Secret Record.
+
+The goblin demands 120 gold coins before he will surrender his treasure. Unfortunately, the forest offers only 23 coins per journey
+
+He is good with numbers, yet strangely careless about where they come from.
+Will you spend an eternity collecting gold, or find another way to settle the debt?
+
+Objective: Settle the goblin's debt and retrieve the hidden flag.
+
+
+
+hint1:             (0 points)
+The forest isn't the only place worth exploring.
+
+Sometimes, the most interesting secrets lie in the conversation between your browser and the goblin's ledger.
+
+
+
+hint2:            (20 points)
+Open your browser's Developer Tools and inspect the Network tab while depositing coins.
+
+The goblin records what he receives, but does he actually verify how much gold you collected?

@@ -1,0 +1,11 @@
+services:
+  forbidden-payload:
+    build: .
+    environment:
+      FLAG: ${FLAG:?Set FLAG in your environment or a private .env file}
+      PORT: "8080"
+    ports:
+      - "8080:8080"
+    mem_limit: 128m
+    restart: unless-stopped
+

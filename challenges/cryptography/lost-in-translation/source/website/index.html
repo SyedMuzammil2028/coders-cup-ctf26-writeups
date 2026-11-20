@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101218">
+  <meta name="description" content="The Forbidden Vault. A cryptography challenge for ACM Coder’s Cup ’26.">
+  <title>The Forbidden Vault · ACM Coder’s Cup ’26</title>
+  <link rel="icon" href="assets/crest.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <div class="architecture" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="page">
+    <header class="masthead">
+      <a class="brand" href="./" aria-label="ACM Coder’s Cup ’26, restart challenge"><img src="assets/crest.svg" width="34" height="40" alt=""><span>ACM CODER’S CUP <span class="year">’26</span><small>CAPTURE THE FLAG</small></span></a>
+      <span class="archive-label">HOGWARTS ARCHIVES <i></i> RESTRICTED SECTION</span>
+    </header>
+    <main>
+      <section id="vault" class="vault" aria-labelledby="vault-title">
+        <p class="eyebrow"><span></span> A SECRET, SEALED IN TIME <span></span></p>
+        <h1 id="vault-title">The Forbidden <em>Vault</em></h1>
+        <p class="intro">Some secrets are not lost.<br>They are waiting for the right mind.</p>
+        <div class="seal-stage">
+          <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+          <span class="seal-inscription" aria-hidden="true">SECRETA · SCIENTIA · POTENTIA</span>
+          <button id="seal" class="seal" aria-label="Open the sealed vault" aria-haspopup="dialog">
+            <svg viewBox="0 0 220 220" aria-hidden="true"><defs><radialGradient id="metal" cx="35%" cy="24%"><stop stop-color="#d7b875"/><stop offset=".45" stop-color="#9e7940"/><stop offset=".8" stop-color="#59401f"/><stop offset="1" stop-color="#ba9453"/></radialGradient><linearGradient id="edge" x2="1" y2="1"><stop stop-color="#edce8f"/><stop offset=".5" stop-color="#4b341b"/><stop offset="1" stop-color="#b38d48"/></linearGradient><filter id="rough"><feTurbulence baseFrequency=".6" numOctaves="3" seed="8" type="fractalNoise"/><feComposite in2="SourceGraphic" operator="in"/><feBlend in="SourceGraphic" mode="soft-light"/></filter></defs><g class="seal-body"><path fill="url(#edge)" d="M110 7 126 13 143 12 154 24 171 29 179 44 194 55 196 73 207 88 204 106 211 123 202 139 198 157 183 167 174 183 157 188 143 201 125 200 108 209 92 202 74 203 61 190 44 184 36 169 21 157 20 139 10 123 15 106 10 88 21 73 24 55 39 45 46 29 63 25 77 12 94 14Z"/><circle cx="110" cy="109" r="88" fill="url(#metal)" filter="url(#rough)"/><circle cx="110" cy="109" r="82" fill="none" stroke="#e0ba73" stroke-opacity=".6"/><circle cx="110" cy="109" r="72" fill="none" stroke="#382b1b" stroke-width="2"/><circle cx="110" cy="109" r="68" fill="none" stroke="#e0ba73" stroke-opacity=".45"/><path d="M72 117q-15-25 3-48M148 117q15-25-3-48M69 103l-13-9m15-3-12-12m15 0-7-14m84 38 13-9m-15-3 12-12m-15 0 7-14M82 146h56m-45 6h34" fill="none" stroke="#3d2b17" stroke-width="3"/><path d="m110 48 4 8-4 8-4-8zM78 151l32 12 32-12" fill="none" stroke="#d2ad65"/><path class="keyhole" d="M110 78a15 15 0 0 0-9 27l-5 28h28l-5-28a15 15 0 0 0-9-27Z" fill="#201b16" stroke="#d4ac62" stroke-width="1.5"/><path class="crack" d="m111 12-8 45 13 21-9 24 16 24-17 29 6 49"/></g></svg>
+          </button>
+          <span class="seal-base" aria-hidden="true">THE ARCHIVE KEEPS ITS SECRETS</span>
+        </div>
+        <button class="text-button" id="open-seal">Break the seal <span aria-hidden="true">↗</span></button>
+        <p class="instruction">Reveal what lies within.</p>
+      </section>
+      <section id="transmission" class="transmission" aria-labelledby="transmission-title" hidden>
+        <p class="eyebrow"><span></span> THE SEAL IS BROKEN <span></span></p>
+        <h1 id="transmission-title" tabindex="-1">Lost in <em>Translation</em></h1>
+        <p class="transmission-subtitle">THE ENCHANTED TRANSMISSION</p>
+        <p class="transmission-intro">A mysterious transmission has been recovered from the Hogwarts archives. Its message has passed through several enchantments, concealing a secret meant only for those who can reverse them.</p>
+        <div class="manuscript">
+          <div class="manuscript-head"><span>ARCHIVE FRAGMENT <b>№ 017</b></span><span id="byte-count">ENCRYPTED</span></div>
+          <pre id="ciphertext" tabindex="0" aria-label="Complete binary ciphertext">Retrieving the transmission…</pre>
+          <div class="manuscript-foot"><span id="copy-status" role="status">Preserved exactly as recovered.</span><button id="copy" class="gold-button" disabled>Copy Ciphertext <span aria-hidden="true">⧉</span></button></div>
+        </div>
+        <p class="hint">Some messages must be read backward before their true meaning appears.</p>
+        <p class="submit-note">Recover the secret. Submit your flag on CTFd.</p>
+      </section>
+    </main>
+    <footer><span>LOST IN TRANSLATION</span><span class="footer-rule"></span><span>CRYPTOGRAPHY <i></i> EASY</span></footer>
+  </div>
+  <dialog id="question" aria-labelledby="question-title" aria-describedby="question-description">
+    <form id="question-form" novalidate>
+      <button type="button" class="close" id="close-question" aria-label="Close question">×</button>
+      <p class="eyebrow">THE FIRST ENCHANTMENT</p>
+      <h2 id="question-title">The Secret of the<br><em>Forbidden Vault</em></h2>
+      <p id="question-description">Two Hogwarts wizards have exchanged magical keys using the ancient <strong>Diffie-Hellman ritual</strong>. Only their shared secret can unlock the enchanted scroll.</p>
+      <p class="parameter-heading">The magical parameters:</p>
+      <dl class="parameters"><div><dt>Prime (p)</dt><dd>17</dd></div><div><dt>Generator (g)</dt><dd>3</dd></div><div><dt>Alice's Public Key (A)</dt><dd>10</dd></div><div><dt>Bob's Secret Key (b)</dt><dd>4</dd></div></dl>
+      <label for="answer">What is their shared secret (S)?</label>
+      <div class="answer-row"><input id="answer" name="answer" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" placeholder="Enter a number" aria-describedby="answer-help answer-error" required><button class="gold-button" id="unlock" type="submit">Break the Seal <span aria-hidden="true">→</span></button></div>
+      <p id="answer-help">Enter the correct number to break the seal.</p>
+      <p id="answer-error" role="alert"></p>
+    </form>
+  </dialog>
+  <noscript><div class="noscript">JavaScript is required to open this archive.</div></noscript>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Keeper’s Archive</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="frame">
+      <div class="identity">
+        <span class="seal" aria-hidden="true">K</span>
+        <div>
+          <p class="wordmark">Keeper’s Archive</p>
+          <p class="subtitle">Hogwarts Records Division — Restricted Archive</p>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="/">Archive Files</a>
+        <a href="/revisions">Revision History</a>
+        <a href="/vault">Keeper’s Vault</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="frame main" tabindex="-1">
+    <noscript><p class="notice">Enable JavaScript to use the archive.</p></noscript>
+    <p id="load-error" class="notice error" role="alert" hidden>The archive could not load. Refresh this page to try again.</p>
+
+    <section id="archive" aria-labelledby="archive-title" hidden>
+      <div class="page-heading">
+        <h1 id="archive-title">Archive Files</h1>
+        <p>Current records and incident report</p>
+      </div>
+      <div class="incident">
+        <article>
+          <h2 class="section-label">Incident report</h2>
+          <p>The Keeper’s Vault has been sealed following an unusual maintenance incident.</p>
+          <p>The archivist insists that the recovery document was certified before the incident. Yet the document currently stored in the archive fails its integrity check.</p>
+          <p>An important access record has also disappeared. The archive preserves more than its latest files.</p>
+          <p>Investigate the records, recover the required evidence, and restore access to the vault.</p>
+          <p class="motto">The archivist trusts fingerprints, not appearances.</p>
+        </article>
+        <section class="file-section" aria-labelledby="current-files-title">
+          <h2 id="current-files-title" class="section-label">Current files</h2>
+          <ul id="current-files" class="file-list"></ul>
+        </section>
+        <aside class="case-record" aria-labelledby="case-title">
+          <h2 id="case-title" class="section-label">Case record</h2>
+          <dl>
+            <div><dt>Reference</dt><dd class="mono" id="case-reference"></dd></div>
+            <div><dt>Vault status</dt><dd><span class="status-dot" aria-hidden="true"></span>Sealed</dd></div>
+            <div><dt>Current revision</dt><dd id="current-revision"></dd></div>
+          </dl>
+          <a class="text-link" href="/revisions">View revision history <span aria-hidden="true">→</span></a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="history" aria-labelledby="history-title" hidden>
+      <div class="page-heading">
+        <h1 id="history-title">Revision History</h1>
+        <p>Open a revision to inspect the files held at that point in time.</p>
+      </div>
+      <div class="history-layout">
+        <section aria-labelledby="timeline-title">
+          <h2 id="timeline-title" class="section-label">Archive timeline</h2>
+          <ol id="timeline" class="timeline"></ol>
+        </section>
+        <section id="revision-files" class="revision-panel" aria-labelledby="revision-title" tabindex="-1">
+          <p class="section-label" id="revision-number"></p>
+          <h2 id="revision-title"></h2>
+          <p id="revision-description"></p>
+          <h3 id="snapshot-title" class="section-label">Files in this revision</h3>
+          <ul id="historical-files" class="file-list" aria-labelledby="snapshot-title"></ul>
+          <a class="text-link" id="history-back" href="/revisions"><span aria-hidden="true">←</span> Back to revision timeline</a>
+          <a class="text-link" id="archive-back" href="/"><span aria-hidden="true">←</span> Back to current archive</a>
+        </section>
+      </div>
+    </section>
+
+    <section id="vault" aria-labelledby="vault-title" hidden>
+      <div class="page-heading">
+        <h1 id="vault-title">Keeper’s Vault</h1>
+        <p>Submit the recovery evidence for verification.</p>
+      </div>
+      <form id="vault-form" class="vault-form" action="/api/vault/verify" method="post" enctype="multipart/form-data">
+        <fieldset id="vault-fields">
+          <legend class="section-label">Recovery evidence</legend>
+          <div class="field">
+            <label for="document">Certified Recovery Document</label>
+            <p class="hint" id="document-hint">Upload the file as downloaded. Maximum size 16 KiB.</p>
+            <input type="file" id="document" name="document" aria-describedby="document-hint" required>
+          </div>
+          <div class="field">
+            <label for="phrase">Recovery Phrase</label>
+            <input class="mono" id="phrase" name="phrase" type="text" maxlength="128" autocomplete="off" autocapitalize="off" spellcheck="false" required>
+          </div>
+          <div class="field">
+            <label for="missing-byte">Missing Byte</label>
+            <p class="hint" id="byte-hint">Which byte was removed from the certified document? Enter its two-digit hexadecimal value.</p>
+            <input class="mono byte-input" id="missing-byte" name="missing_byte" type="text" pattern="[0-9A-Fa-f]{2}" maxlength="2" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="byte-hint" required>
+          </div>
+          <button class="primary" id="verify" type="submit">Verify evidence</button>
+        </fieldset>
+        <p id="vault-error" class="notice error" role="alert" hidden></p>
+      </form>
+      <section id="unlocked" class="vault-form unlocked" aria-labelledby="success-message" hidden>
+        <p class="section-label"><span class="status-dot" aria-hidden="true"></span>Vault unlocked</p>
+        <h2 id="success-message" tabindex="-1"></h2>
+        <h3 id="flag-label">Challenge flag</h3>
+        <div class="flag-line">
+          <div class="flag-value" role="region" aria-labelledby="flag-label" tabindex="0"><code id="flag" class="mono"></code></div>
+          <button id="copy-flag" type="button">Copy flag</button>
+        </div>
+        <p id="copy-status" class="hint" role="status"></p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="frame">Coder’s Cup ’26 <span aria-hidden="true">/</span> Cryptography</div>
+  </footer>
+
+  <dialog id="preview" aria-labelledby="preview-title">
+    <div class="preview-head">
+      <div>
+        <p class="section-label" id="preview-context"></p>
+        <h2 id="preview-title" class="mono"></h2>
+      </div>
+      <button id="close-preview" type="button" autofocus>Close</button>
+    </div>
+    <pre id="preview-text" aria-live="polite" tabindex="0"></pre>
+    <div class="preview-foot"><a class="button primary" id="preview-download">Download</a></div>
+  </dialog>
+
+  <template id="file-row">
+    <li class="file-row">
+      <div class="file-ident">
+        <span class="file-icon" aria-hidden="true"></span>
+        <span class="mono file-name"></span>
+      </div>
+      <div class="file-actions">
+        <a class="button preview-link">Preview</a>
+        <a class="button download-link">Download</a>
+      </div>
+    </li>
+  </template>
+</body>
+</html>

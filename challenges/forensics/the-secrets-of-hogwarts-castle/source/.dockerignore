@@ -1,0 +1,15 @@
+.git
+.gitignore
+.env
+.venv
+__pycache__
+assets
+docs
+scripts/*
+!scripts/ctfd-entrypoint.sh
+!scripts/prepare-ctfd-castle2.py
+challenge.yml
+README.md
+verify.sh
+docker-compose.yml
+render.yaml

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Hogwarts Castle Archives — recovered photographs from within the castle walls.">
+    <title>Hogwarts Castle Archives — Secrets within the walls</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Mono:wght@400;500&family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="{{ url_for('index') }}" aria-label="Hogwarts Castle Archives home"><span class="brand-mark">✦</span><span>Hogwarts Castle <em>Archives</em></span></a>
+      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a class="is-active" href="{{ url_for('index') }}">Archive</a>
+        <a href="{{ url_for('gallery') }}">Photographs</a>
+        <a href="#archive-notes">Archive notes</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Recovered records · castle archive division</p>
+          <h1>Secrets lie <i>beneath</i> the stone.</h1>
+          <p class="hero-subtitle">The Secrets Hidden Within the Castle Walls</p>
+          <p class="lede">Four photographs surfaced from a sealed shelf deep within Hogwarts Castle. Their frames are familiar; their histories are not.</p>
+          <a class="button" href="{{ url_for('gallery') }}">Enter the photograph gallery <span>→</span></a>
+          <p class="quiet-note">A former keeper once wrote that every wall remembers what its visitors forget.</p>
+        </div>
+        <figure class="hero-image"><img src="{{ url_for('static', filename='images/castle1.jpg') }}" alt="The recovered photograph of a castle entrance"><figcaption>Recovered plate no. 01 · The Forgotten Entrance</figcaption></figure>
+      </section>
+
+      <section class="mission" aria-label="About the archive">
+        <p class="eyebrow">A record of rooms that keep their own counsel</p>
+        <p class="mission-copy">The Hogwarts Castle Archives preserve recovered correspondence, architectural surveys, and photographs from the places ordinary maps leave blank.</p>
+      </section>
+
+      <section class="feature-grid" aria-label="Archive highlights">
+        <article><span class="feature-number">I</span><h2>Recovered plates</h2><p>Original files are retained with their provenance intact, just as they arrived from the abandoned record room.</p></article>
+        <article><span class="feature-number">II</span><h2>Keeper annotations</h2><p>Margin notes and archival descriptions sometimes tell a different story from the image itself.</p></article>
+        <article><span class="feature-number">III</span><h2>Stone remembers</h2><p>Every recovered trace is catalogued for those patient enough to follow the castle's older paths.</p></article>
+      </section>
+
+      <section id="archive-notes" class="facts-section">
+        <div><p class="eyebrow">From the keeper's ledger</p><h2>Four entries, one unfinished account.</h2></div>
+        <div class="facts-list">
+          <article><span>01</span><p>All four plates were filed together, though their locations within the castle appear unrelated.</p></article>
+          <article><span>02</span><p>An older inventory lists a sealed archive whose custody changed after the final restoration.</p></article>
+          <article><span>03</span><p>The most recent entry bears no signature—only a watchtower reference in a careful hand.</p></article>
+        </div>
+      </section>
+
+      <section class="collection-callout">
+        <p class="eyebrow">A newly opened folio</p><h2>Four recovered views of a castle with more to say.</h2><p>Explore the original photographs from the sealed collection.</p><a href="{{ url_for('gallery') }}">Open the gallery →</a>
+      </section>
+    </main>
+
+    <footer><div class="brand footer-brand"><span class="brand-mark">✦</span><span>Hogwarts Castle <em>Archives</em></span></div><p>Castle Archive Division · Recovered records and historical plates.</p><p>© 2026 Hogwarts Castle Archives</p></footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

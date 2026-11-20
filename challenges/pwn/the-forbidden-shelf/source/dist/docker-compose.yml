@@ -1,0 +1,9 @@
+name: cc-forbidden-shelf
+services:
+  forbidden_shelf:
+    build:
+      context: ..
+      dockerfile: dist/Dockerfile
+    ports:
+      - "${PORT:-31338}:1337"
+    restart: unless-stopped

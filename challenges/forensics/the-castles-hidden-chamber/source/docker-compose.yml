@@ -1,0 +1,11 @@
+services:
+  hidden-chamber:
+    build: .
+    environment:
+      FLAG: "${FLAG:?Set FLAG in your shell or a private .env file}"
+      PORT: "8000"
+    ports:
+      - "${HOST_PORT:-8000}:8000"
+    mem_limit: 64m
+    restart: unless-stopped
+

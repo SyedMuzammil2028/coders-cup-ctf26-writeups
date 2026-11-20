@@ -1,0 +1,26 @@
+🔐 Lost in Translation
+350    Crypto     Medium
+
+Deep within the forbidden archives of Hogwarts, an ancient transmission lies sealed behind a forgotten enchantment.
+
+The message has passed through several layers of transformation, Fortunately, the last keeper left a warning:
+
+"Eight bits form a character, but the message is not as it appears"
+
+A second note, barely visible reads:
+
+"Remove the familiar encoding that wraps the message, then let the alphabet travel thirteen places to return home."
+
+Break the vault's seal, reverse the enchantments in the correct order, and recover the hidden secret.
+
+Flag Format: ACM{...}
+
+
+hint:                (0 points)
+Reverse the string the movement you can't solve any futher
+
+
+
+
+hint:                (25 points)
+Reverse the string after converting Binary to ASCII, last step uses a A 13-step shift

@@ -1,0 +1,9 @@
+name: cc-sorting-hat
+services:
+  sorting_hat:
+    build:
+      context: ..
+      dockerfile: dist/Dockerfile
+    ports:
+      - "${PORT:-31337}:1337"
+    restart: unless-stopped

@@ -1,0 +1,9 @@
+services:
+  hogwarts-castle-archives:
+    build: .
+    ports:
+      - "10000:10000"
+    environment:
+      PORT: "10000"
+    mem_limit: 128m
+    restart: unless-stopped

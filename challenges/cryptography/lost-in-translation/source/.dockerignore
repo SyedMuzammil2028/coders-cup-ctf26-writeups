@@ -1,0 +1,10 @@
+**/__pycache__
+**/*.pyc
+.git
+work
+tests
+README.md
+TESTING.md
+website/ciphertext.json
+*.zip
+*.tar
