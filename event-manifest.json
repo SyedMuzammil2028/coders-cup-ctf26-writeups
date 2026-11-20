@@ -1,14 +1,5 @@
 [
   {
-    "id": 11,
-    "name": "Welcome Party",
-    "category": "Flag Format",
-    "solves": 44,
-    "slug": "welcome-party",
-    "source": false,
-    "attachments": []
-  },
-  {
     "id": 24,
     "name": "Snape's Potion Ledger",
     "category": "Reverse Engineering",

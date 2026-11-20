@@ -37,12 +37,6 @@ Individual challenge attribution appears in the tables below and in every `CHALL
 | [The Last Newline](cryptography/the-last-newline/) | 500 | Ah54n | Included |
 | [The Ravenclaw Cipher](cryptography/the-ravenclaw-cipher/) | 200 | Ah54n | Included |
 
-### Flag Format
-
-| Challenge | Initial points | Author | Source |
-| --- | ---: | --- | --- |
-| [Welcome Party](flag-format/welcome-party/) | 50 | Not recorded | Archival files only |
-
 ### Forensics
 
 | Challenge | Initial points | Author | Source |
