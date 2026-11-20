@@ -1,13 +1,17 @@
 # Coder’s Cup ’26 — Challenge Write-ups
 
-Welcome to the official post-event write-up collection for Coder’s Cup ’26. Each category folder at the repository root contains the original challenge material, where available, and the intended solution.
+This post-event educational release contains write-ups and challenge material for the challenges solved during Coder’s Cup ’26. It excludes unsolved challenges and event-only data such as production configuration, runtime containers, database data, organizer tooling, and secrets.
+
+## Final leaderboard
+
+![Coder’s Cup ’26 final leaderboard](assets/final-leaderboard.png)
 
 ## How to use these write-ups
 
 1. Open the relevant category folder, then choose a challenge directory.
 2. Read `CHALLENGE.md` for the original challenge brief.
-3. Follow `WRITEUP.md` for the intended solution and flag format.
-4. If present, use `RUN_LOCALLY.md` with `challenge-files/` or `source/` to replay the challenge on your own system.
+3. If present, follow `RUN_LOCALLY.md` and use `challenge-files/` or `source/` to make the challenge live on your own machine.
+4. Try to solve it yourself first, then use `WRITEUP.md` to compare your approach with the intended solution and flag format.
 
 File-based and OSINT challenges do not require a local service. For dynamic-container challenges, `<hash>` represents the per-team value used during the event.
 
